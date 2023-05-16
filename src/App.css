@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header,
+footer {
+  background-color: black;
+  color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header {
+  height: 52px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header h1 {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+
+footer {
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+}
+
+.menu li {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.menu li:hover {
+  text-decoration: underline;
+}
+
+section {
+  display: flex;
+  height: calc(100vh - 148px);
+  padding: 40px;
+}
+
+section .left {
+  width: 300px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-right: 1px solid gainsboro;
+  padding-right: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+section .left strong {
+  margin: 10px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+section .left span {
+  text-align: center;
+}
+
+section .right {
+  display: flex;
+  height: 200px;
+  flex-direction: column;
+  margin-bottom: 20px;
+  border-bottom: 1px solid gainsboro;
+  width: 100%;
+}
+
+section .right a {
+  margin-top: 20px;
+}
+
+section img {
+  width: 200px;
+  height: 200px;
+  background-color: black;
+  border-radius: 50%;
+  padding: 3px;
 }
